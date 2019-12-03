@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+	
+	<head>
+
+		<meta charset = "utf-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+		
+		<link rel="icon" href="images/asteroidsico.png">
+		<link rel = "stylesheet" href = "css/razteroids.css">
+
+		<script src = "js/saucer.js"></script>
+		<script src = "js/explode.js"></script>
+		<script src = "js/rocks.js"></script>
+		<script src = "js/bullet.js"></script>
+		<script src = "js/ship.js"></script>
+		<script src = "js/main.js"></script>
+
+		<title>Razteroids</title>
+
+	</head>
+
+	<body>
+
+		<!-- CANVAS #1 -->
+		<canvas id = "canvas" width = "700" height = "700">no canvas</canvas>
+
+		<!-- PAUSE SCREEN -->
+		<div id = "pause">
+			<h1>Game Paused</h1>
+			<h3>Sound Options</h3>
+			<div class = "left">Play Game Beat</div>
+			<div class = "right"><input type = "checkbox" id = "chkbeat" checked></div>
+			<div class = "left">Play Missle Sound</div>
+			<div class = "right"><input type = "checkbox" id = "chkmissle" checked></div>
+			<div class = "left">Play Thrust Sound</div>
+			<div class = "right"><input type = "checkbox" id = "chkthrust" checked></div>
+			<div class = "left">Play Explosion Sound</div>
+			<div class = "right"><input type = "checkbox" id = "chkexplode" checked></div>
+			<div class = "left">Play Saucer Sound</div>
+			<div class = "right"><input type = "checkbox" id = "chksaucer" checked></div>
+			<br>
+			<h3>Game Stats</h3>
+			<div class = "left">Current Level:</div>
+			<div id = "level" class = "right"></div>
+			<div class = "left">Minutes Played:</div>
+			<div id = "minutesplayed" class = "right"></div>
+			<div class = "left">Missles Fired:</div>
+			<div id = "misslesfired" class = "right"></div>
+			<div class = "left">Asteroids Destroyed:</div>
+			<div id = "asteroidsdestroyed" class = "right"></div>
+			<div class = "left">Saucers Destroyed</div>
+			<div id = "saucersdestroyed" class = "right"></div>
+			<br><br>
+			<button id = "play">Continue</button>
+			<br><br>
+			<div id = "errors"></div>
+		</div>
+
+		<!-- HIGH SCORE ENTRY SCREEN -->
+		<div id = "highscore">
+			<h1>Congratulations!</h1>
+			<div id = "entername">Your score has placed you in the top ten best.  Please 
+				enter your name below (15 characters max):</div>
+			<br>
+			<input type = "text" id = "hsname" maxlength = "15" value = "Player 1">
+			<br><br>
+			<button class = "btn" id = "btnok">OK</button>
+			<button class = "btn" id = "btncancel">Cancel</button>
+		</div>
+
+	</body>
+
+</html>
